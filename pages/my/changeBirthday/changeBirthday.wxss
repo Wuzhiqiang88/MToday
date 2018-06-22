@@ -1,0 +1,7 @@
+/* pages/inputbirthday/inputbirthday.wxss */
+.weui-btn{
+  margin-top: 50rpx;
+  color: #fff;
+  background-color: #118fff;
+  width: 95%;
+}

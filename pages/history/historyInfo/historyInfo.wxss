@@ -1,0 +1,34 @@
+/* pages/history/historyInfo/historyInfo.wxss */
+.container {
+  width: 93%;
+  margin: 0 auto;
+}
+.date{
+  margin-top: 20rpx;
+  display: flex;
+  flex-direction: row;
+}
+.date image{
+  width: 28rpx;
+  height: 28rpx;
+  margin-right: 8rpx;
+  margin-top: 5rpx;
+}
+.time{
+  color: #bfbfbf;
+}
+.title{
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+  font-size: 45rpx;
+  font-weight: bold;
+  line-height: 50rpx;
+}
+.des{
+  margin-top: 20rpx;
+  text-indent: 2em;
+  font-size: 30rpx;
+}
+.img image{
+  width: 100%;
+}

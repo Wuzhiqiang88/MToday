@@ -1,0 +1,15 @@
+<!--pages/inputbirthday/inputbirthday.wxml-->
+<view class="weui-cells__tips">请设置出生日期</view>
+<view class="weui-cells weui-cells_after-title">
+  <view class="weui-cell weui-cell_input">
+    <view class="weui-cell__hd">
+      <view class="weui-label">日期</view>
+    </view>
+    <view class="weui-cell__bd">
+      <picker mode="date" value="{{date}}" start="1000-09-01" end="{{end}}" bindchange="bindDateChange">
+        <view class="weui-input">{{date}}</view>
+      </picker>
+    </view>
+  </view>
+</view>
+<button class="weui-btn" bindtap="toDo">确定</button>

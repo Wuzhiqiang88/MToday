@@ -1,0 +1,58 @@
+<template name="historyItem">
+  <navigator hover-class="none" class='history' url="/pages/history/historyInfo/historyInfo?id={{item.id}}">
+    <image class='time' src='/icon/time.png'></image>
+    <view class='content'>{{item.title}}</view>
+    <view class='date'>{{item.year}}</view>
+  </navigator>
+</template>
+<template name="myhistoryItem">
+
+  <navigator hover-class="none" class='history' url="/pages/history/myhistoryInfo/myhistoryInfo?id={{index}}">
+    <image class='mytime' src='/icon/mytime.png'></image>
+    <view class='mycontent'>我：{{item.title}}</view>
+    <view class='mydate'>{{item.year}}</view>
+  </navigator>
+
+</template>
+<template name="myallhistoryItem">
+  <navigator hover-class="none" class='myallhistory' url="/pages/history/myhistoryInfo/myhistoryInfo?id={{index}}">
+    <view class='myallhistory_year'>{{item.year}}年</view>
+    <view class='myallhistory_div'>
+      <view class='myallhistory_date'>
+        <view class='myallhistory_day'>{{item.day}}</view>
+        <view class='myallhistory_month'>{{item.month}}月</view>
+      </view>
+      <view class='myallhistory_right'>
+        <view class='myallhistory_del'>
+          <image catchtap='del' src='/icon/more.png'></image>
+        </view>
+        <view class='myallhistory_location'>
+          {{item.location}}
+        </view>
+        <view class='myallhistory_title'>{{item.title}}</view>
+        <view wx:if="{{item.imgalist.length==1}}" class='myallhistory_pic' wx:for="{{item.imgalist}}" wx:for-item="pic" wx:key="{{item.imgalist}}">
+          <image mode='aspectFill' src='{{pic}}'></image>
+        </view>
+        <view wx:if="{{item.imgalist.length!=1}}" class='allpic'>
+          <view class='myallhistory_pic3' wx:if="{{index<3}}" wx:for="{{item.imgalist}}" wx:for-item="pic" wx:key="{{item.imgalist}}">
+            <image mode='aspectFill' src='{{pic}}'></image>
+          </view>
+        </view>
+      </view>
+    </view>
+  </navigator>
+</template>
+<template name="hot">
+  <view class='hot'>
+    <view class='hotleft'>
+      <view wx:if="{{index<3}}" class='hotnumred'>{{item.num}}</view>
+      <view wx:if="{{index>2}}" class='hotnum'>{{item.num}}</view>
+      <view class='hottitle'>{{item.name}}</view>
+      <view class='level'>{{item.level}}</view>
+    </view>
+    <view class='hotright'>
+      <image wx:if="{{item.trend=='rise'}}" src='/icon/hot.svg'></image>
+      <image wx:if="{{item.trend=='fail'}}" src='/icon/fail.svg'></image>
+    </view>
+  </view>
+</template>

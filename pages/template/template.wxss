@@ -1,0 +1,215 @@
+.date {
+  transform: translateX(-600rpx);
+  color: #118fff;
+  margin-top: 20rpx;
+  font-weight: bold;
+}
+
+.content {
+  color: white;
+  position: relative;
+  margin-left: 18rpx;
+  background-color: #118fff;
+  width: 400rpx;
+  font-size: 30rpx;
+  padding: 20rpx;
+  border-radius: 18rpx;
+  box-shadow: 2px 2px 2px hsla(0, 0%, 0%, 0.3);
+  opacity: 0.8;
+}
+
+.content:before {
+  position: absolute;
+  content: "\00a0";
+  display: inline-block;
+  width: 0px;
+  height: 0px;
+  border-width: 10px 10px 10px 0;
+  border-style: solid;
+  border-color: transparent #118fff transparent transparent;
+  left: -8px;
+  top: 8px;
+}
+
+.time {
+  margin-top: 20rpx;
+  transform: translateX(-18rpx);
+  width: 30rpx;
+  height: 30rpx;
+  background-color: #f8f8f8;
+}
+
+.mytime {
+  margin-top: 20rpx;
+  transform: translateX(-18rpx);
+  width: 30rpx;
+  height: 30rpx;
+  background-color: #f8f8f8;
+}
+
+.mydate {
+  transform: translateX(-600rpx);
+  color: #28b7a3;
+  margin-top: 20rpx;
+  font-weight: bold;
+}
+
+.mycontent {
+  color: white;
+  position: relative;
+  margin-left: 18rpx;
+  background-color: #28b7a3;
+  width: 400rpx;
+  font-size: 30rpx;
+  padding: 20rpx;
+  border-radius: 18rpx;
+  box-shadow: 2px 2px 2px hsla(0, 0%, 0%, 0.3);
+  opacity: 0.8;
+}
+
+.mycontent:before {
+  position: absolute;
+  content: "\00a0";
+  display: inline-block;
+  width: 0px;
+  height: 0px;
+  border-width: 10px 10px 10px 0;
+  border-style: solid;
+  border-color: transparent #28b7a3 transparent transparent;
+  left: -8px;
+  top: 8px;
+}
+
+.myallhistory {
+  background-color: white;
+  padding: 40rpx;
+  margin-top: 15rpx;
+}
+
+.myallhistory_year {
+  font-size: 14pt;
+  margin-bottom: 40rpx;
+  margin-top: -10rpx;
+}
+
+.myallhistory_div {
+  display: flex;
+  flex-direction: row;
+}
+
+.myallhistory_date {
+  display: flex;
+  flex-direction: column;
+  margin-right: 30rpx;
+}
+
+.myallhistory_day {
+  font-size: 18pt;
+}
+
+.myallhistory_month {
+  margin-top: 5rpx;
+  text-align: center;
+  color: #999;
+}
+
+.myallhistory_location {
+  color: #999;
+}
+
+.myallhistory_title {
+  margin-top: 20rpx;
+  font-size: 14pt;
+}
+
+.myallhistory_right {
+  width: 100%;
+  position: relative;
+}
+
+.myallhistory_del {
+  position: absolute;
+  right: 0;
+}
+
+.myallhistory_del image {
+  width: 36rpx;
+  height: 36rpx;
+}
+
+.myallhistory_pic {
+  margin-top: 30rpx;
+  width: 100%;
+}
+
+.myallhistory_pic image {
+  width: 585rpx;
+  height: 300rpx;
+}
+
+.myallhistory_pic3 {
+  width: 188rpx;
+  margin-right: 8rpx;
+}
+
+.myallhistory_pic3 image {
+  width: 188rpx;
+  height: 188rpx;
+}
+
+.allpic {
+  margin-top: 30rpx;
+  display: flex;
+  flex-direction: row;
+}
+
+.hot {
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1rpx #ccc solid;
+  height: 75rpx;
+  align-items: center;
+  font-size: 12pt;
+}
+
+.hotleft {
+  display: flex;
+  flex-direction: row;
+}
+
+.hotnumred {
+  font-size: 13pt;
+  color: red;
+  margin-left: 20rpx;
+  margin-right: 30rpx;
+  font-weight: bold;
+  font-style: oblique;
+  width: 60rpx;
+  text-align: center;
+}
+
+.hotnum {
+  color: darkorange;
+  margin-right: 30rpx;
+  margin-left: 20rpx;
+  font-style: oblique;
+  width: 60rpx;
+  text-align: center;
+}
+
+.level {
+  font-size: 10pt;
+  color: #999;
+  margin-left: 20rpx;
+}
+
+.hotright {
+  margin-right: 30rpx;
+}
+
+.hotright image {
+  margin-top: 10rpx;
+  width: 35rpx;
+  height: 35rpx;
+}

@@ -1,0 +1,51 @@
+<!--pages/history/myhistoryInfo/myhistoryInfo.wxml-->
+<view class='container'>
+  <view class='div'>
+  <view class='delhistory'><image bindtap='del' src='/icon/more.png'></image></view>
+    <view class='header'>
+      <view class='left'>{{myhistory.year}}</view>
+      <view class='right'>
+        <view class='date'>
+          <view class='day'>{{myhistory.day}}</view>
+          <view class='month'>{{month}}月</view>
+        </view>
+      </view>
+    </view>
+    <view class='location'>
+      <image src='/icon/location.png'></image>{{myhistory.location}}
+    </view>
+    <view class='time'>
+      <image src='/icon/date.png'></image> {{myhistory.hours}}:{{myhistory.minutes}}:{{myhistory.seconds}}</view>
+    <view class='title'>{{myhistory.title}}</view>
+    <view class='content'>{{myhistory.content}}</view>
+
+    <view class='allpic' wx:if="{{myhistory.imgalist.length==4}}">
+      <view wx:for="{{myhistory.imgalist}}" wx:for-item="image" wx:key="image">
+        <image mode='aspectFill' bindtap="preview" src="{{image}}" data-list="{{myhistory.imgalist}}" data-src="{{image}}" class='img4'></image>
+      </view>
+    </view>
+
+
+    <view class='allpic' wx:elif="{{myhistory.imgalist.length==2}}">
+      <view wx:for="{{myhistory.imgalist}}" wx:for-item="image" wx:key="image">
+        <image mode='aspectFill' bindtap="preview" src="{{image}}" data-list="{{myhistory.imgalist}}" data-src="{{image}}" class='img2'></image>
+      </view>
+    </view>
+
+    <view class='allpic' wx:elif="{{myhistory.imgalist.length==1}}">
+      <view wx:for="{{myhistory.imgalist}}" wx:for-item="image" wx:key="image">
+        <image mode='aspectFill' bindtap="preview" src="{{image}}" data-list="{{myhistory.imgalist}}" data-src="{{image}}" class='img1'></image>
+      </view>
+    </view>
+
+    <view class='allpic' wx:else>
+      <view wx:for="{{myhistory.imgalist}}" wx:for-item="image" wx:key="image">
+        <image mode='aspectFill' bindtap="preview" src="{{image}}" data-list="{{myhistory.imgalist}}" data-src="{{image}}" class='img'></image>
+      </view>
+
+    </view>
+
+
+  </view>
+</view>
+<loading hidden="{{hidden}}">Loading...</loading>

@@ -1,0 +1,40 @@
+<!--pages/xz/xz.wxml-->
+<view class='page'>
+  <view class="container">
+    <loading hidden="{{isOK}}">
+     Loading...
+    </loading>
+    <view class='constellation' style="background-image: url('{{backgif}}');">
+      <view class='name'>{{constellationInfo.name}}</view>
+      <view class='index'>
+        <view class='allindex'>
+          爱情指数
+          <progress percent="{{love}}" stroke-width="12" show-info="true" active="true" activeColor="#118fff" />
+        </view>
+        <view class='allindex'>
+          健康指数
+          <progress percent="{{health}}" stroke-width="12" show-info="true" active="true" activeColor="#118fff" />
+        </view>
+        <view class='allindex'>
+          工作指数
+          <progress percent="{{work}}" stroke-width="12" show-info="true" active="true" activeColor="#118fff" />
+        </view>
+        <view class='allindex'>
+          幸运指数
+          <progress percent="{{all}}" stroke-width="12" show-info="true" active="true" activeColor="#118fff" />
+        </view>
+      </view>
+      <view class='txt'>星座伴侣
+        <view class='val'>{{constellationInfo.QFriend}}</view>
+      </view>
+      <view class='txt'>幸运颜色
+        <view class='val'>{{constellationInfo.color}}</view>
+      </view>
+      <view class='txt'>幸运数字
+        <view class='val'>{{constellationInfo.number}}</view>
+      </view>
+      <view class='txt' style='font-size: 38rpx;font-weight: bold;margin-top: 40rpx;margin-bottom: 20rpx;'>运势概述</view>
+      <view class='txt' style='font-size: 32rpx;margin-right: 30rpx;'> {{constellationInfo.summary}}</view>
+    </view>
+  </view>
+</view>

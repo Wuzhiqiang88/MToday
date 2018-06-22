@@ -1,0 +1,23 @@
+<!--pages/history/newHistory/newHistory.wxml-->
+<view class='page'>
+  <view class='container'>
+    <textarea bindblur="gettitle" maxlength="35" placeholder-class="placeholder" auto-focus="true" placeholder='加个标题哟~' class='title'></textarea>
+    <textarea bindblur="getcontent" placeholder='来吧，尽情发挥吧...' class='content'></textarea>
+
+    <view class='allpic'>
+
+      <view class='imgalist' wx:for="{{imgalist}}" wx:for-item="image" wx:key="image">
+
+          <image mode='aspectFill' bindtap="preview" src="{{image}}"data-list="{{imgalist}}" data-src="{{image}}" class='img'></image>
+          <image src='/icon/del.svg' class='icon' data-id='{{index}}' catchtap='delimage'></image>
+
+      </view>
+      
+      <image wx:if="{{imgalist.length<9}}" bindtap="chooseimage" class='img' src='/icon/upload.png'></image>
+
+    </view>
+
+    <view class='location'><image class='iconlocation' catchtap='mylocation'  src='/icon/location.png'></image><view wx:if="{{location}}">{{location}}<image src='/icon/dellocation.png' class='dellocation' catchtap='dellocation'></image></view></view>
+    <button class="weui-btn" bindtap="toDo">完成</button>
+  </view>
+</view>

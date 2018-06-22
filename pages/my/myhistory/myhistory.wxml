@@ -1,0 +1,5 @@
+<!--pages/my/myhistory/myhistory.wxml-->
+<import src="/pages/template/template.wxml" />
+<view class='page'>
+  <template is="myallhistoryItem" data="{{item,index:index}}" wx:for="{{myallhistory}}" wx:key="myallhistory" />
+</view>

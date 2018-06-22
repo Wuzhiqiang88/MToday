@@ -1,0 +1,83 @@
+<!--pages/history/index/index.wxml-->
+<import src="/pages/template/template.wxml" />
+<view class="page">
+ <image bindtap="toNew" class='new' src='/icon/new.png'></image>
+  <view class="weui-tab">
+    <view class="weui-navbar">
+      <block wx:for="{{tabs}}" wx:key="*this">
+        <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+          <view class="weui-navbar__title">{{item}}</view>
+        </view>
+      </block>
+      <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
+    </view>
+    <view class="weui-tab__panel">
+      <view hidden="{{activeIndex != 0}}">
+        <loading hidden="{{hidden}}">Loading...</loading>
+        <scroll-view>
+          <view class='timeline'>
+            <view class='history'>
+              <image class='start' src='/icon/start.png'></image>
+              <view class='title'>{{month}}月{{day}}日发生了什么？</view>
+            </view>
+            <view wx:for="{{myhistory}}" wx:key="myhistory">
+            <view wx:if="{{item.month==month}}">
+               <template wx:if="{{item.day==day}}" is="myhistoryItem" data="{{item,index:index}}" wx:key="myhistory"/>
+               </view>
+            </view>
+          
+            <template is="historyItem" data="{{item}}" wx:for="{{allhistory}}" wx:key="allhistory" />
+          </view>
+          <view class="weui-loadmore weui-loadmore_line">
+            <view class="weui-loadmore__tips weui-loadmore__tips_in-line">已经到底了</view>
+          </view>
+        </scroll-view>
+      </view>
+      <view hidden="{{activeIndex != 1}}">
+        <loading hidden="{{hidden}}">Loading...</loading>
+        <scroll-view>
+          <view class='timeline'>
+            <view class='history'>
+              <image class='start' src='/icon/start.png'></image>
+              <view class='title'>{{month}}月{{day}}日发生了什么？</view>
+            </view>
+            <template is="historyItem" data="{{item}}" wx:for="{{events}}" wx:key="events" />
+          </view>
+          <view class="weui-loadmore weui-loadmore_line">
+            <view class="weui-loadmore__tips weui-loadmore__tips_in-line">已经到底了</view>
+          </view>
+        </scroll-view>
+      </view>
+      <view hidden="{{activeIndex != 2}}">
+        <loading hidden="{{hidden}}">Loading...</loading>
+        <scroll-view>
+          <view class='timeline'>
+            <view class='history'>
+              <image class='start' src='/icon/start.png'></image>
+              <view class='title'>{{month}}月{{day}}日谁出生了呢？</view>
+            </view>
+            <template is="historyItem" data="{{item}}" wx:for="{{born}}" wx:key="born" />
+          </view>
+          <view class="weui-loadmore weui-loadmore_line">
+            <view class="weui-loadmore__tips weui-loadmore__tips_in-line">已经到底了</view>
+          </view>
+        </scroll-view>
+      </view>
+      <view hidden="{{activeIndex != 3}}">
+        <loading hidden="{{hidden}}">Loading...</loading>
+        <scroll-view>
+          <view class='timeline'>
+            <view class='history'>
+              <image class='start' src='/icon/start.png'></image>
+              <view class='title'>{{month}}月{{day}}日谁逝世了呢？</view>
+            </view>
+            <template is="historyItem" data="{{item}}" wx:for="{{die}}" wx:key="die" />
+          </view>
+          <view class="weui-loadmore weui-loadmore_line">
+            <view class="weui-loadmore__tips weui-loadmore__tips_in-line">已经到底了</view>
+          </view>
+        </scroll-view>
+      </view>
+    </view>
+  </view>
+</view>

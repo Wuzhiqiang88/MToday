@@ -1,0 +1,59 @@
+{
+  "pages": [
+
+    "pages/start/guide/guide",
+    "pages/start/editInfo/editInfo",
+    "pages/history/index/index",
+    "pages/my/myhistory/myhistory",
+        "pages/headLine/index/index",
+    "pages/history/myhistoryInfo/myhistoryInfo",
+    "pages/history/historyInfo/historyInfo",
+    "pages/history/newHistory/newHistory",
+    "pages/home/index/index",
+    "pages/home/weather/weather",
+    "pages/home/constellation/constellation",
+    "pages/my/myInfo/myInfo",
+    "pages/my/settings/settings",
+    "pages/my/changeBirthday/changeBirthday"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#118fff",
+    "navigationBarTitleText": "Today",
+    "navigationBarTextStyle": "white"
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "tabBar": {
+    "color": "#bfbfbf",
+    "selectedColor": "#118fff",
+    "list": [
+      {
+        "selectedIconPath": "icon/homeSelect.png",
+        "iconPath": "icon/home.png",
+        "pagePath": "pages/home/index/index",
+        "text": "首页"
+      },
+      {
+        "selectedIconPath": "icon/headLineSelect.png",
+        "iconPath": "icon/headLine.png",
+        "pagePath": "pages/headLine/index/index",
+        "text": "热点"
+      },
+      {
+        "selectedIconPath": "icon/historySelect.png",
+        "iconPath": "icon/history.png",
+        "pagePath": "pages/history/index/index",
+        "text": "历史"
+      },
+      {
+        "selectedIconPath": "icon/myInfoSelect.png",
+        "iconPath": "icon/myInfo.png",
+        "pagePath": "pages/my/settings/settings",
+        "text": "我的"
+      }
+    ]
+  }
+}

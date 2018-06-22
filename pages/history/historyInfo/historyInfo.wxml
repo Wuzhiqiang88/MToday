@@ -1,0 +1,10 @@
+<!--pages/history/historyInfo/historyInfo.wxml-->
+<view class='page'>
+<view class='container'>
+<view class='date'><image src='/icon/date.png'></image><view class='time'>{{history.year}}年{{history.month}}月{{history.day}}日 {{history.lunar}}</view></view>
+<view class='title'>{{history.title}}</view>
+<view class='img' wx:if="{{history.pic}}"><image src='{{history.pic}}'></image></view>
+<view class='des'>{{history.des}}</view>
+</view>
+</view>
+<loading hidden="{{hidden}}">Loading...</loading>

@@ -1,0 +1,170 @@
+.container {
+  width: 93%;
+  margin: 0 auto;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.weui-loadmore {
+  margin: 0 auto;
+}
+
+.scroll {
+  height: 1310rpx;
+}
+
+.time {
+  margin-left: 15rpx;
+  font-size: 24rpx;
+  color: grey;
+}
+
+.logo {
+  margin-left: 15rpx;
+  margin-top: 10rpx;
+  font-size: 54rpx;
+  font-weight: bold;
+}
+
+.head {
+  height: 135rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background-color: #f8f8f8;
+}
+
+.head image {
+  margin-right: 15rpx;
+  margin-top: 25rpx;
+  width: 38px;
+  height: 38px;
+}
+
+.curWeather {
+  background-size: cover;
+  background-color: #ff7f24;
+  margin-top: 26rpx;
+  height: 560rpx;
+  width: 96%;
+  display: flex;
+  flex-direction: column; /*纵向*/
+  border-radius: 30rpx;
+  box-shadow: 1rpx 1rpx 20rpx grey;
+}
+
+.curTemperature {
+  color: #fff;
+  font-size: 0.8em;
+  flex-grow: 1; /*表示将剩余的空间分配给它*/
+}
+
+.tmp {
+  margin: 50rpx;
+  font-size: 120rpx;
+}
+
+.curExtern {
+  display: flex;
+  flex-direction: row; /*横向*/
+  justify-content: space-around;
+  color: #fff;
+  font-size: 30rpx;
+  margin-bottom: 20rpx;
+}
+
+.val {
+  text-align: center;
+  font-size: 36rpx;
+}
+
+.line {
+  border: 0.2rpx solid white;
+  height: 50rpx;
+}
+
+.city {
+  margin-top: 20rpx;
+  margin-left: 50rpx;
+  font-size: 28rpx;
+}
+
+.street {
+  margin-top: 20rpx;
+  margin-left: 50rpx;
+  font-size: 28rpx;
+}
+
+.type {
+  margin-left: 50rpx;
+  font-size: 28rpx;
+}
+
+.type image {
+  width: 30px;
+  height: 30px;
+}
+
+.typeall {
+  display: flex;
+  flex-direction: row; /*横向*/
+}
+
+.title {
+  margin: 50rpx;
+  font-size: 68rpx;
+}
+
+.constellation {
+  background-size: cover;
+  margin-top: 50rpx;
+  height: 560rpx;
+  width: 96%;
+  display: flex;
+  flex-direction: column; /*纵向*/
+  border-radius: 30rpx;
+  background-color: rebeccapurple;
+  color: #fff;
+  box-shadow: 1rpx 1rpx 20rpx grey;
+}
+
+.constellationName {
+  margin-left: 50rpx;
+  margin-top: 60rpx;
+  font-size: 58rpx;
+}
+
+.index {
+  margin-top: 40rpx;
+  margin-left: 50rpx;
+  color: #fff;
+  font-size: 32rpx;
+  flex-grow: 1; /*表示将剩余的空间分配给它*/
+}
+
+.allindex {
+  margin-top: 20rpx;
+  display: flex;
+  flex-direction: row; /*横向*/
+}
+
+.allindex progress {
+  margin-left: 30rpx;
+  width: 60%;
+}
+
+.page__bd {
+  margin-top: 100rpx;
+  width: 100%;
+}
+
+.weui-loadmore__tips_in-line {
+  background-color: #f8f8f8;
+}

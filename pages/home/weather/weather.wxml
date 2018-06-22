@@ -1,0 +1,47 @@
+<!--pages/weather/weather.wxml-->
+<view class='page'>
+  <view class="container">
+    <view class="weather today">
+      <view>
+        <view class='date'>今天</view>
+        <view class='location'>{{weather.basic.location}}/{{weather.basic.parent_city}}</view>
+        <view class='tmp'>{{weather.daily_forecast[0].tmp_min}}℃~{{weather.daily_forecast[0].tmp_max}}℃</view>
+        <view class='cond_txt'>{{weather.daily_forecast[0].cond_txt_d}}</view>
+      </view>
+      <view>
+        <view class='weather_icon' wx:if="{{weather.daily_forecast[0].cond_code_d}}">
+          <image src="{{code}}/{{weather.daily_forecast[0].cond_code_d}}.png"></image>
+        </view>
+        <view class='lastUpdateDate'>最后更新：{{weather.update.loc}}</view>
+      </view>
+    </view>
+    <view class="weather tomorrow">
+      <view>
+        <text>明天</text>
+        <view class='location'>{{weather.basic.location}}/{{weather.basic.parent_city}}</view>
+        <view class='tmp'>{{weather.daily_forecast[1].tmp_min}}℃~{{weather.daily_forecast[1].tmp_max}}℃</view>
+        <view class='cond_txt'>{{weather.daily_forecast[1].cond_txt_d}}</view>
+      </view>
+      <view>
+        <view class='weather_icon' wx:if="{{weather.daily_forecast[1].cond_code_d}}">
+          <image src="{{code}}/{{weather.daily_forecast[1].cond_code_d}}.png"></image>
+        </view>
+        <view class='lastUpdateDate'>最后更新：{{weather.update.loc}}</view>
+      </view>
+    </view>
+    <view class="weather aftertomorrow">
+      <view>
+        <text>后天</text>
+        <view class='location'>{{weather.basic.location}}/{{weather.basic.parent_city}}</view>
+        <view class='tmp'>{{weather.daily_forecast[2].tmp_min}}℃~{{weather.daily_forecast[2].tmp_max}}℃</view>
+        <view class='cond_txt'>{{weather.daily_forecast[2].cond_txt_d}}</view>
+      </view>
+      <view>
+        <view class='weather_icon' wx:if="{{weather.daily_forecast[2].cond_code_d}}">
+          <image src="{{code}}/{{weather.daily_forecast[2].cond_code_d}}.png"></image>
+        </view>
+        <view class='lastUpdateDate'>最后更新：{{weather.update.loc}}</view>
+      </view>
+    </view>
+  </view>
+</view>
