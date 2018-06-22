@@ -4,3 +4,7 @@ MToday今日资讯小程序：整理今日各种资讯（今日实时天气，�
 运行截图：
 
 ![image](https://github.com/Wuzhiqiang88/MToday/blob/master/gif.gif)
+![image](https://github.com/Wuzhiqiang88/MToday/blob/master/gif1.gif)
+![image](https://github.com/Wuzhiqiang88/MToday/blob/master/gif2.gif)
+![image](https://github.com/Wuzhiqiang88/MToday/blob/master/gif3.gif)
+![image](https://github.com/Wuzhiqiang88/MToday/blob/master/gif4.gif)
